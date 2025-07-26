@@ -20,11 +20,10 @@ class Bureaucrat
         const std::string name;
         int grade;
     public:
-        Bureaucrat(); // default constructor
-        Bureaucrat(const std::string, int grade); // parameterise contructor
-        Bureaucrat(const Bureaucrat& obj); // copy constructor
-        Bureaucrat& operator=(const Bureaucrat& obj); // copy assignment operator
-        ~Bureaucrat(); // destruntor
+        Bureaucrat(const std::string& name, int grade);
+        Bureaucrat(const Bureaucrat& obj);
+        Bureaucrat& operator=(const Bureaucrat& obj);
+        ~Bureaucrat();
 
         const std::string& getName() const;
         int getGrade() const;
@@ -33,3 +32,5 @@ class Bureaucrat
         void decrementGrade();
 
 };
+
+std::ostream& operator<<(std::ostream& out, const Bureaucrat& b);
