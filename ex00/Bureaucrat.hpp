@@ -30,6 +30,18 @@ class Bureaucrat
 
         void incrementGrade();
         void decrementGrade();
+        
+        // Nested exceptions classes
+        class GradeTooHighException : public std::exception
+        {
+            public:
+                const char* what() const noexcept override;
+        };
+        class GradeTooLowException : public std::exception
+        {
+            public:
+                const char* what() const noexcept override;
+        };
 
 };
 
