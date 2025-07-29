@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gahmed <gahmed@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 11:07:56 by gahmed            #+#    #+#             */
-/*   Updated: 2025/07/26 11:07:56 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/07/29 16:31:26 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
+#include "Form.hpp"
 
 class Bureaucrat
 {
@@ -20,6 +21,7 @@ class Bureaucrat
         const std::string name;
         int grade;
     public:
+		Bureaucrat();
         Bureaucrat(const std::string& name, int grade);
         Bureaucrat(const Bureaucrat& obj);
         Bureaucrat& operator=(const Bureaucrat& obj);
@@ -30,6 +32,8 @@ class Bureaucrat
 
         void incrementGrade();
         void decrementGrade();
+
+		void signForm(Form& f);
         
         // Nested exceptions classes
         class GradeTooHighException : public std::exception

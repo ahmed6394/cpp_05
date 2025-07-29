@@ -3,14 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gahmed <gahmed@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 11:07:45 by gahmed            #+#    #+#             */
-/*   Updated: 2025/07/26 11:07:45 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/07/29 15:50:10 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+
+// default constructor
+Bureaucrat::Bureaucrat() : name("Default"), grade(1){}
 
 //constructor
 Bureaucrat::Bureaucrat(const std::string& name, int grade) : name(name), grade(grade)
