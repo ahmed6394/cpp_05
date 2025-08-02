@@ -6,7 +6,7 @@
 /*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 15:25:29 by gahmed            #+#    #+#             */
-/*   Updated: 2025/07/29 17:22:05 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/08/02 14:46:55 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ class Form
 		Form& operator=(const Form& obj); // assignment operator
 		~Form(); // destructor
 
-		const std::string getName() const;
+		std::string getName() const;
 		bool getIsSigned() const;
-		const int getSignGrade() const;
-		const int getExecuteGrade() const;
+		int getSignGrade() const;
+		int getExecuteGrade() const;
 		
 
 		void beSigned(const Bureaucrat& b);

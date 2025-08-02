@@ -6,7 +6,7 @@
 /*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 15:25:17 by gahmed            #+#    #+#             */
-/*   Updated: 2025/08/02 14:05:04 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/08/02 15:01:59 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ Form::~Form(){
 	
 }
 
-const std::string Form::getName() const {
+std::string Form::getName() const {
 	return name;
 }
 
@@ -48,11 +48,11 @@ bool Form::getIsSigned() const {
 	return isSigned;
 }
 
-const int Form::getSignGrade() const {
+int Form::getSignGrade() const {
 	return signGrade;
 }
 
-const int Form::getExecuteGrade() const {
+int Form::getExecuteGrade() const {
 	return executeGrade;	
 }
 
@@ -60,6 +60,8 @@ const int Form::getExecuteGrade() const {
 void Form::beSigned(const Bureaucrat& b) {
 	if(b.getGrade() > signGrade)
 		throw GradeTooLowException();
+	if (isSigned)
+		throw std::runtime_error("From is already signed");
 	isSigned = true;
 }
 
