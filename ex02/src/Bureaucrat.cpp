@@ -6,7 +6,7 @@
 /*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 11:07:45 by gahmed            #+#    #+#             */
-/*   Updated: 2025/08/05 14:07:29 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/08/05 17:39:38 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,4 +77,22 @@ std::ostream& operator<<(std::ostream& out, const Bureaucrat& b)
 {
     out << b.getName() << ", bureaucrat grade " << b.getGrade() << ".";
     return out;
+}
+
+void Bureaucrat::signForm(AForm& f) {
+	try
+	{
+		f.beSigned(*this);
+		std::cout << name << " signed " << f.getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << name << " couldn't signed " << f.getName() << " because " << e.what() << '\n';
+	}
+	
+}
+
+void Bureaucrat::executeForm(AForm const & form) const 
+{
+	
 }
