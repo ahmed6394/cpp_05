@@ -6,7 +6,7 @@
 /*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 11:07:45 by gahmed            #+#    #+#             */
-/*   Updated: 2025/08/05 17:39:38 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/08/15 14:45:34 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,5 +94,13 @@ void Bureaucrat::signForm(AForm& f) {
 
 void Bureaucrat::executeForm(AForm const & form) const 
 {
-	
+	try 
+	{
+		form.execute(*this);
+		std::cout << name << " executed " << form.getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << name << " couldn't execute " << form.getName() << " because " << e.what() << std::endl;
+	}
 }

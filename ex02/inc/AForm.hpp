@@ -6,7 +6,7 @@
 /*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 12:43:25 by gahmed            #+#    #+#             */
-/*   Updated: 2025/08/05 17:44:04 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/08/15 12:27:37 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,17 @@ class AForm
 				const char* what() const noexcept override;
 		};
 
+		class FormNotSignedException : public std::exception
+		{
+			public:
+				const char* what() const noexcept override;
+		};
+
 		// member functions
 		void execute(Bureaucrat const & executor) const;
 
 		// pure virtual/ abstruct function
-		virtual void finalExecute() const = 0;
+		virtual void finalExecution() const = 0;
 		
 		
 };
