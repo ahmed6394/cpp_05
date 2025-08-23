@@ -6,7 +6,7 @@
 /*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 12:43:16 by gahmed            #+#    #+#             */
-/*   Updated: 2025/08/20 17:17:03 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/08/23 12:12:02 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,12 @@ RobotomyRequestForm::~RobotomyRequestForm(){}
 
 void RobotomyRequestForm::finalExecution() const
 {
+	if (std::rand() % 2 == 1)
+	{
+		std::cout << "Drrrrrrrr... " << std::endl;
+		std::cout << target << " has been robotomized successfully!" << std::endl;
+	}
+    else 
+        std::cout << "The robotomy of " << target << " failed." << std::endl;
 	
 }
