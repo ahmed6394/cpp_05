@@ -6,7 +6,7 @@
 /*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 12:43:19 by gahmed            #+#    #+#             */
-/*   Updated: 2025/08/15 14:51:39 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/08/23 16:40:03 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,4 @@ void ShrubberyCreationForm::finalExecution() const
 	std::cout << "Schrubbery Creation for " << target << std::endl;
 	tree(outputfile);
 	outputfile.close();
-	
 }
